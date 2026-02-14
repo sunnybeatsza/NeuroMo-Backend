@@ -1,7 +1,11 @@
-from config.database import in_memory_db
+from config.database import file_based_db
+from features.auth.auth_service import authenticate
 
-# Create in memory database
+# Create a file based database if does not exist.
+file_based_db()
 
-in_memory_db()
 print("Hello")
-print("Welcome to NeuroMo!")
+print("Welcome to NeuroMo!\n")
+
+#Authenticate user credentials
+authenticate()
