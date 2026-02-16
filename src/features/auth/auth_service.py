@@ -18,7 +18,7 @@ def load_users():
     return users
 
 def save_user(username, hashed_password):
-    with open(DB_FILE, "a") as f:
+    with open(DB_FILE, "w") as f:
         f.write(f"{username}:{hashed_password.decode()}\n")  # store hashed password as string
 
 def register(users):
